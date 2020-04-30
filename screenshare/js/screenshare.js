@@ -37,7 +37,7 @@ function handleError(error) {
 
 navigator.mediaDevices.getUserMedia(aconstraints).then(handleSuccess).catch(handleError);
   //Millicast required info.
-  let yourUrl = "https://YOURSITE.com/millicast/screenshare/player/screenshare.html?id=";
+  let yourUrl = "https://YOURSITE.com/millicast/screenshare/player/?id=";
   let url;// path to Millicast Server - Returned from API
   let jwt;//authorization token - Returned from API
 
