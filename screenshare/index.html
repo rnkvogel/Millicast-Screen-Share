@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Millicast - Realtime Streaming Demo (Broadcaster)</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/screenshare.css">
+<script src="js/adapter-latest.js"></script>
+<link rel="icon" 
+      type="image/png" 
+      href="https://YOURSITE.com/images/fav.png"/>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<base target="_blank">
+<title>Millicast Screen Share</title>
+<link rel="stylesheet" href="css/screenshare.css">
+</head>
+<body>
+<div class="container">
+  <video id="video" autoplay muted playsinline ></video>
+  <a id="viewerUrl" class="bottom-right" href="" target="_blank" ></a>
+  <div class="top-left">
+<input type="button" id="startSS" value="Start Capture"/>&nbsp;<input type="button" id="stopSS" value="Stop Capture"/>
+<input id="viewTxt" class="base-input" type="hidden" value="" placeholder="Account Id"/>
+<input type="button" id="publishBtn" class="inline-b" onclick="start()" value="START PUBLISH" />
+
+</br>
+
+ </div>
+    <div id="form" class="">
+    <input id="tokenTxt" class="base-input" type="hidden" value="" placeholder="Token" />
+    <input id="streamTxt" class="base-input ml-10 mr-10" type="hidden" value="" placeholder="Stream Name"/>
+   </div>
+    <div class="ml-10 mt-10">
+    <div class="ml-10 mt-10">
+    <audio id="gum-local" controls autoplay type=""></audio>
+<pre id="log"></pre>
+
+<script src="js/screenshare.js" type="module"></script>
+</body>
+</html>
