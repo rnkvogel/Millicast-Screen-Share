@@ -44,43 +44,6 @@ const turnUrl = 'https://turn.millicast.com/webrtc/_turn';
 if (adapter.browserDetails.browser == 'firefox') {
   adapter.browserShim.shimGetDisplayMedia(window, 'screen');
 }
-/*
-function handleSuccess(stream) {
-  startButton.disabled = true;
-    video.srcObject = stream;
-
-  // demonstrates how to detect that the user has stopped
-  // sharing the screen via the browser UI.
-  stream.getVideoTracks()[0].addEventListener('ended', () => {
-    errorMsg('The user has ended sharing the screen');
-    startSS.disabled = false;
-  });
-}
-
-function handleError(error) {
-  errorMsg(`getDisplayMedia error: ${error.name}`, error);
-}
-
-function errorMsg(msg, error) {
-  const errorElement = document.querySelector('#errorMsg');
-  errorElement.innerHTML += `<p>${msg}</p>`;
-  if (typeof error !== 'undefined') {
-    console.error(error);
-  }
-}
-
-const startButton = document.getElementById('startSS');
-startButton.addEventListener('click', () => {
-  navigator.mediaDevices.getDisplayMedia({video: true})
-      .then(handleSuccess, handleError);
-});
-
-if ((navigator.mediaDevices && 'getDisplayMedia' in navigator.mediaDevices)) {
-  startButton.disabled = false;
-} else {
-  errorMsg('getDisplayMedia is not supported');
-}
-*/
 //Start Publishing
  function startBroadcast() {
       if(isBroadcasting) {
