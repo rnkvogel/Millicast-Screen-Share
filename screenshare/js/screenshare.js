@@ -16,9 +16,9 @@ const turnUrl = 'https://turn.millicast.com/webrtc/_turn';
   // hard code it here, or enter it at runtime on the field.
   
    let params = new URLSearchParams(document.location.search.substring(1));
-   let accountId = 'YOURID'; //let accountId ADD YOUR ACCOUNT ID HERE
-   let streamName = params.get('id');
-   let token ="YOUR LONG TOKEN STRING FROM PORTAL";
+   let streamName = params.get('streamNameTxt'); //let accountId ADD YOUR ACCOUNT ID HERE
+   let accountId = params.get('viewTxt');
+   let token = params.get('tokenTxt');
    console.log('Millicast Viewer Stream: ', streamName);
 
   
