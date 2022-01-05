@@ -21,5 +21,7 @@ You will use an ID=YOUR_STREAM_NAME.
 
 Go to your site link https://YOUR_WEB_SITE.com/screenshare/?id=YOUR_STREAM_NAME
 
+Demo: https://rnkvogel.github.io/Millicast-Screen-Share/screenshare/
+
 
   
