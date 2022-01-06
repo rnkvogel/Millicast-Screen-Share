@@ -17,13 +17,9 @@ const turnUrl = 'https://turn.millicast.com/webrtc/_turn';
    let streamName = params.get('streamTxt'); //let accountId ADD YOUR ACCOUNT ID HERE
    let accountId = params.get('viewTxt');
    let token = params.get('tokenTxt');
-   let videoBitrateSS = 2500;
+   let videoBitrateSS = 2800;
    console.log('Millicast Viewer Stream: ', streamName);
    
-
-    //Millicast required info.
-  let player = "https://github.com/rnkvogel/Millicast-Screen-Share/screenshare/player/?id="+ streamName + "&at=" + accountId;
-
 
   
   const codec = 'h264'; //'vp8', 'vp9'
@@ -48,6 +44,20 @@ const turnUrl = 'https://turn.millicast.com/webrtc/_turn';
 if (adapter.browserDetails.browser == 'firefox') {
   adapter.browserShim.shimGetDisplayMedia(window, 'screen');
 }
+const startButton = document.getElementById('startSS');
+startButton.addEventListener('click', () => {
+//if missing params, assume the form has them.
+if (!token || !streamName || !accountId) {
+    getFormParams();
+    }
+
+navigator.mediaDevices.getDisplayMedia({video: true})
+      .then(handleSuccess, handleError);
+     
+    
+});
+
+
 //Start Publishing
  function startBroadcast() {
       if(isBroadcasting) {
@@ -73,7 +83,7 @@ if (adapter.browserDetails.browser == 'firefox') {
 }
 //Stop Publishing
 
- //Stop Start
+ //Stop Start08/579
 
   function stopBroadcast(){
     window.close();
@@ -347,7 +357,7 @@ function connect() {
       if (href.indexOf('htm') > -1) {
         href = href.substring(0, href.lastIndexOf('/') + 1);
       }
-      let url = player;
+      let url =  "https://github.com/rnkvogel/Millicast-Screen-Share/screenshare/player/?id="+ streamName + "&at=" + accountId;;
       vTxt.innerText = 'Viewer Path:\n' + url;
       vTxt.setAttribute('href', url);
     }
