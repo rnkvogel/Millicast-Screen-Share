@@ -353,7 +353,7 @@ function connect() {
       if (href.indexOf('htm') > -1) {
         href = href.substring(0, href.lastIndexOf('/') + 1);
       }
-      let url =  "https://github.com/rnkvogel/Millicast-Screen-Share/screenshare/player/?id="+ streamName + "&at=" + accountId;;
+      let url =  "https://rnkvogel.github.io/Millicast-Screen-Share/screenshare/player/?id="+ streamName + "&at=" + accountId;;
       vTxt.innerText = 'Viewer Path:\n' + url;
       vTxt.setAttribute('href', url);
     }
