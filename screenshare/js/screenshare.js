@@ -345,7 +345,7 @@ function connect() {
       if (href.indexOf('htm') > -1) {
         href = href.substring(0, href.lastIndexOf('/') + 1);
       }
-      let url        = player2;
+      let url = yourUrl;
       vTxt.innerText = 'Viewer Path:\n' + url;
       vTxt.setAttribute('href', url);
     }
