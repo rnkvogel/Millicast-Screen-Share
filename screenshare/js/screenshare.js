@@ -8,6 +8,9 @@ const apiPath = 'https://director.millicast.com/api/director/publish';
 const turnUrl = 'https://turn.millicast.com/webrtc/_turn';
 // Put variables in global scope to make them available to the browser console.
 
+  let url;// path to Millicast Server - Returned from API
+  let jwt;//authorization token - Returned from API
+
   // hard code it here, or enter it at runtime on the field.
   
    let params = new URLSearchParams(document.location.search.substring(1));
@@ -16,12 +19,11 @@ const turnUrl = 'https://turn.millicast.com/webrtc/_turn';
    let token = params.get('tokenTxt');
    let videoBitrateSS = 2500;
    console.log('Millicast Viewer Stream: ', streamName);
-
+   
 
     //Millicast required info.
-  let yourUrl = "https://github.com/rnkvogel/Millicast-Screen-Share/screenshare/player/?id="+ streamName + "&at=" + accountId;
-  let url;// path to Millicast Server - Returned from API
-  let jwt;//authorization token - Returned from API
+  let player = "https://github.com/rnkvogel/Millicast-Screen-Share/screenshare/player/?id="+ streamName + "&at=" + accountId;
+
 
   
   const codec = 'h264'; //'vp8', 'vp9'
@@ -345,7 +347,7 @@ function connect() {
       if (href.indexOf('htm') > -1) {
         href = href.substring(0, href.lastIndexOf('/') + 1);
       }
-      let url = yourUrl;
+      let url = player;
       vTxt.innerText = 'Viewer Path:\n' + url;
       vTxt.setAttribute('href', url);
     }
