@@ -6,10 +6,10 @@ body{
   width: 100vh;height: 100vw;
   overflow-x: hidden; /* Hide horizontal scrollbar */
     }
-#screenshare {
+#localVideo {
 width: 100%;
-height: 100%;
- 
+height: 75%;
+bottom:0;
 }
 .container {
 display: flex-wrap;
