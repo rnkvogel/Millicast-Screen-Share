@@ -50,10 +50,6 @@ startButton.addEventListener('click', () => {
 if (!token || !streamName || !accountId) {
     getFormParams();
     }
-
-navigator.mediaDevices.getDisplayMedia({video: true})
-      .then(handleSuccess, handleError);
-     
     
 });
 
