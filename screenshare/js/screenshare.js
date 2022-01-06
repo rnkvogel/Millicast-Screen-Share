@@ -14,6 +14,7 @@ const turnUrl = 'https://turn.millicast.com/webrtc/_turn';
    let streamName = params.get('streamTxt'); //let accountId ADD YOUR ACCOUNT ID HERE
    let accountId = params.get('viewTxt');
    let token = params.get('tokenTxt');
+   let videoBitrateSS = 2500;
    console.log('Millicast Viewer Stream: ', streamName);
 
 
